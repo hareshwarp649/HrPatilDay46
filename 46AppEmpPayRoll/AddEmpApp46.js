@@ -8,13 +8,14 @@ class EmployeePayRoll {
 
     get name() { return this._name; }
     set name(name) {
-        let checkName = RegExp('^[A-Z]{1}[a-z]{2,}$');
-        if (checkName.test(name)) {
+        let nameRegex = RegExp('^[A-Z]{1}[a-zA-Z\\s]{2,}$');
+        if (nameRegex.test(name))
+       
             this._name = name;
-        }
-        else {
-            throw "InCorrect name";
-        }
+      
+       else 
+            throw "InCorrect !";
+      
     }
 
     get profilePic() { return this._profilePic; }

@@ -23,18 +23,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         output.textContent = salary.value;
     });
 
-    const date = document.querySelector('#date');
-    date.addEventListener('input', function () {
-        let startDate = document.querySelector('#day').value + " " + document.querySelector('#month').value + " " +
-            document.querySelector('#year').value;
-        try {
-            (new EmployeePayRoll()).startDate = new Date(Date.parse(startDate));
-            setTextValue('.date-error', "");
-        }
-        catch (e) {
-            setTextValue('.date-error', e);
-        }
-    });
+    
 });
 const setTextValue = (id, value) => {
     const element = document.querySelector(id);
